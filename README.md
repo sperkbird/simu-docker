@@ -9,6 +9,18 @@ Simutrans server for Docker
 
 ```docker run -it -e SIMUTRANS_SERVERNAME=<Servername> -e SIMUTRANS_SAVEGAME=<Savefile> -v <savefilepath>:/opt/simutrans/save -d -p <port>:13353 simutrans:stable```
 
+## Description - 詳細
+ In Dockerfile, download version 120.4.1(r8588) source, ./configure with server options ,compile simutrans with fix a bugs, download and unzip paksets....  
+ so It was very looong road for me.;-)  
+ Dockerfileの中では、120.4.1(r8588)のソースをダウンロードし、サーバーオプションと共にconfigureし、バグをつぶしつつコンパイルし、パックセットをダウンロードし・・・  
+ それは私にとって、とてもながーい道のりでした。  
+
+ And finally, I noticed.  
+ そして、最後に気がついてしまったのです。  
+ 
+ The revision number is different, with this(r8588) and my desktop machine(r8600).  
+ デスクトップマシンとこのサーバとでリビジョン番号が違うことに。  
+
 ## Background - 背景
  2days ago,I wanted to play simutrans with my friends.  
  So, I desided to serve it with docker.  
