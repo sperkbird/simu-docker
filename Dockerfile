@@ -24,6 +24,11 @@ RUN autoconf \
 RUN cp -r simutrans /opt/simutrans \
 	&& cp sim /opt/simutrans
 
+# build nettool(simutrans admin tool)
+WORKDIR /tmp/simutrans/nettools
+RUN OSTYPE=linux make -j
+RUN cp nettool /opt/simutarns
+
 # get base pak
 WORKDIR /opt/simutrans
 RUN curl -L -o "/tmp/simupak.zip" "https://downloads.sourceforge.net/project/simutrans/pak64/120-4-1/simupak64-120-4-1.zip" \
